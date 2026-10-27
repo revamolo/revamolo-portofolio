@@ -21,8 +21,8 @@
   <link rel="icon" type="image/png" href="out/test-banner.png">
   <link rel="apple-touch-icon" href="out/test-banner.png">
 
-  <!-- Stylesheet (Cache-busted v2.2) -->
-  <link rel="stylesheet" href="style.css?v=2.2">
+  <!-- Stylesheet (Cache-busted v3.0) -->
+  <link rel="stylesheet" href="style.css?v=3.0">
 </head>
 <body>
 
@@ -83,8 +83,6 @@
         <video 
           class="hero-video" 
           id="heroVideo"
-          src="out/portofolio-revamolo-test1(landscape).mp4" 
-          poster="out/land-scene1.png"
           autoplay 
           muted 
           loop 
@@ -92,6 +90,7 @@
           preload="auto"
           aria-label="Reva Molo Motion Video"
         >
+          <source src="out/portofolio-revamolo-test1(portrait).mp4" type="video/mp4" media="(max-width: 768px)">
           <source src="out/portofolio-revamolo-test1(landscape).mp4" type="video/mp4">
           Browser Anda tidak mendukung pemutar video HTML5.
         </video>
@@ -790,7 +789,7 @@
     </svg>
   </button>
 
-  <!-- Script Engine (Cache-busted v2.2) -->
-  <script src="main.js?v=2.2"></script>
+  <!-- Script Engine (Cache-busted v3.0) -->
+  <script src="main.js?v=3.0"></script>
 </body>
 </html>

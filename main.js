@@ -120,7 +120,32 @@ function initHeroVideo() {
     });
   };
 
+  // Responsive video switcher: Mobile Phone (Vertical 9:16) vs Desktop (Landscape 16:9)
+  const syncHeroSource = () => {
+    const isMobile = window.innerWidth <= 768;
+    const targetSrc = isMobile
+      ? 'out/portofolio-revamolo-test1(portrait).mp4'
+      : 'out/portofolio-revamolo-test1(landscape).mp4';
+    const targetPoster = isMobile
+      ? 'out/curr-vert-scene1.png'
+      : 'out/land-scene1.png';
+
+    const currentSrc = heroVideo.currentSrc || heroVideo.getAttribute('src') || '';
+    if (!currentSrc.includes(targetSrc)) {
+      heroVideo.src = targetSrc;
+      heroVideo.poster = targetPoster;
+      heroVideo.load();
+      tryPlay();
+    }
+  };
+
+  syncHeroSource();
   tryPlay();
+
+  window.addEventListener('resize', () => {
+    clearTimeout(window.__heroResizeTimer);
+    window.__heroResizeTimer = setTimeout(syncHeroSource, 250);
+  });
 
   if (audioToggleBtn) {
     audioToggleBtn.addEventListener('click', () => {

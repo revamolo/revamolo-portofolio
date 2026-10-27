@@ -2025,3 +2025,426 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ==========================================================================
+   MOBILE DEVICE POLISH & COMPACT AIRY LAYOUT (< 768px)
+   Prevents crowded, overflowing elements & makes the phone experience sleek
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Container & Section Flow */
+  .container {
+    padding: 0 18px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-header {
+    margin-bottom: 28px;
+  }
+
+  .pill-badge {
+    padding: 4px 14px;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  /* Hero Section (Vertical Fullscreen on Mobile) */
+  .hero-section {
+    height: 100dvh;
+    min-height: 100dvh;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-overlay-top {
+    height: 90px;
+  }
+
+  .hero-overlay-bottom {
+    height: 22%;
+  }
+
+  .hero-floating-status {
+    bottom: 24px;
+    left: 16px;
+    padding: 6px 14px;
+    gap: 8px;
+  }
+
+  .hero-floating-status span {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-scroll-indicator {
+    bottom: 20px;
+    gap: 4px;
+  }
+
+  .mouse-pill {
+    width: 18px;
+    height: 28px;
+    padding-top: 4px;
+  }
+
+  .hero-audio-toggle {
+    bottom: 24px;
+    right: 16px;
+    padding: 6px 14px;
+    min-height: 34px;
+    font-size: 0.68rem;
+  }
+
+  /* Section 2: Narrative & Background */
+  .about-grid {
+    gap: 32px;
+  }
+
+  .about-headline {
+    font-size: 1.35rem;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .about-lead {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .about-body {
+    font-size: 0.84rem;
+    line-height: 1.6;
+  }
+
+  .metrics-row {
+    padding: 14px 16px;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .metric-number {
+    font-size: 1.45rem;
+  }
+
+  .metric-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  .education-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .edu-badge {
+    padding: 5px 14px;
+    font-size: 0.68rem;
+    margin-bottom: 14px;
+  }
+
+  .edu-institution {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+  }
+
+  .edu-divider {
+    width: 90px;
+    margin: 10px 0 18px 0;
+  }
+
+  .cumlaude-badge {
+    padding: 10px 18px;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .cumlaude-text {
+    font-size: 1.35rem;
+  }
+
+  .ipk-pill {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+
+  .edu-footer-tag {
+    font-size: 0.72rem;
+    padding: 6px 14px;
+  }
+
+  /* Section 3: Core Competencies & Tools */
+  .competencies-container {
+    gap: 36px;
+  }
+
+  .pillars-grid {
+    gap: 14px;
+  }
+
+  .pillar-card {
+    padding: 18px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .pillar-icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
+  .pillar-title {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .pillar-description {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .tools-sub-title {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+
+  .tools-sub-header {
+    margin-bottom: 20px;
+  }
+
+  .tools-grid {
+    gap: 12px;
+  }
+
+  .tool-card {
+    padding: 16px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .tool-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tool-name {
+    font-size: 1rem;
+  }
+
+  .tool-subtitle {
+    font-size: 0.68rem;
+    margin-bottom: 6px;
+  }
+
+  .tool-desc {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  /* Section 4: Portfolio & Showcase */
+  .portfolio-grid {
+    gap: 16px;
+  }
+
+  .project-card {
+    padding: 20px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .project-top-row {
+    margin-bottom: 10px;
+  }
+
+  .project-title {
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+  }
+
+  .project-role-badge {
+    padding: 4px 12px;
+    margin-bottom: 12px;
+  }
+
+  .project-impact {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+
+  .project-highlights {
+    gap: 6px;
+    margin-bottom: 18px;
+    padding-top: 10px;
+  }
+
+  .highlight-item {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .btn-card-action {
+    min-height: 38px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  /* Motion Showcase on Mobile */
+  .showcase-container {
+    margin-top: 28px;
+    padding: 18px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .showcase-header {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .showcase-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .showcase-info p {
+    font-size: 0.8rem;
+  }
+
+  .ratio-switcher {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 4px;
+    gap: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .ratio-switcher::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ratio-tab {
+    min-height: 34px;
+    padding: 6px 12px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .showcase-video-stage.aspect-header {
+    aspect-ratio: 16 / 9;
+    max-height: 240px;
+    min-height: 190px;
+  }
+
+  .showcase-video-stage.aspect-landscape {
+    aspect-ratio: 16 / 9;
+    max-height: 240px;
+  }
+
+  .showcase-video-stage.aspect-vertical {
+    max-width: 270px;
+    max-height: 480px;
+  }
+
+  .video-custom-controls {
+    padding: 6px 14px;
+    margin-top: 10px;
+  }
+
+  .video-status-text {
+    font-size: 0.68rem;
+  }
+
+  /* Section 5: Outro & Contact */
+  .outro-section {
+    padding: 50px 0 28px 0;
+  }
+
+  .outro-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .outro-desc {
+    font-size: 0.84rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .email-box {
+    padding: 10px 14px;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .email-address {
+    font-size: 0.85rem;
+  }
+
+  .supporting-links {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .btn-secondary-link {
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 0.78rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .site-footer-bar {
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  .footer-copy {
+    font-size: 0.72rem;
+    text-align: center;
+  }
+
+  .footer-tech {
+    font-size: 0.68rem;
+  }
+
+  /* Modal on Mobile */
+  .modal-dialog {
+    padding: 22px 16px;
+    max-height: 90vh;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+  }
+
+  .modal-section-text,
+  .modal-list li {
+    font-size: 0.84rem;
+  }
+}
