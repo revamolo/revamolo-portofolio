@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Reva Molo — Creative Strategist & Content Development | Portfolio</title>
+  
+  <!-- SEO & Social Graph Meta Tags -->
+  <meta name="description" content="Portfolio Reva Molo, S.Sos (Cum Laude, Universitas Brawijaya). Creative Strategist & Content Development yang mengintegrasikan perspektif sosiologis ke dalam narasi digital dan motion graphics berdaya jangkau tinggi.">
+  <meta name="keywords" content="Reva Molo, Creative Strategist, Content Development, Motion Graphics, Remotion, Sosiologi, Universitas Brawijaya, Cum Laude, VaxNet, INAMED, HalalCare">
+  <meta name="author" content="Reva Molo">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://revamolo.com/">
+  <meta property="og:title" content="Reva Molo — Creative Strategist & Content Development">
+  <meta property="og:description" content="Bridging sociological perspective into high-impact digital narratives. Creative strategy, content architecture, and programmatic motion graphics.">
+  <meta property="og:image" content="out/header-scene1.png">
+
+  <!-- Favicon & Touch Icon -->
+  <link rel="icon" type="image/png" href="out/test-banner.png">
+  <link rel="apple-touch-icon" href="out/test-banner.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Dynamic Canvas & Gradients -->
+  <div class="bg-canvas-container" id="bgCanvasContainer">
+    <div class="bg-radial-gradient"></div>
+    <div class="bg-grid-overlay"></div>
+    <div class="bg-glow-orb orb-1"></div>
+    <div class="bg-glow-orb orb-2"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Reva Molo Home">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Reva Molo</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#competencies" class="nav-link">Competencies</a></li>
+          <li><a href="#portfolio" class="nav-link">Featured Works</a></li>
+          <li><a href="#showcase" class="nav-link">Motion Showcase</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-nav-cta">Let's Talk</a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#about">01 // About & Philosophy</a>
+    <a href="#competencies">02 // Core Competencies & Tools</a>
+    <a href="#portfolio">03 // Featured Works & Projects</a>
+    <a href="#showcase">04 // Motion Graphics Showcase</a>
+    <a href="#contact">05 // Outro & Contact</a>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-wrapper">
+
+    <!-- ==========================================================================
+         SECTION 1: HERO BANNER (Full-Bleed Video Fit)
+         ========================================================================== -->
+    <!-- ==========================================================================
+         SECTION 1: HERO BANNER (Full Responsive Video Showcase)
+         ========================================================================== -->
+    <section class="hero-section" id="hero" aria-label="Hero Video Banner">
+      <!-- Ambient blurred backdrop for seamless edge glow and viewport filling -->
+      <video 
+        class="hero-video-ambient" 
+        src="out/portofolio-revamolo-test1(header).mp4" 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        aria-hidden="true"
+        tabindex="-1"
+      ></video>
+
+      <div class="hero-video-wrapper">
+        <video 
+          class="hero-video" 
+          id="heroVideo"
+          src="out/portofolio-revamolo-test1(header).mp4" 
+          poster="out/header-scene1.png"
+          autoplay 
+          muted 
+          loop 
+          playsinline 
+          preload="auto"
+          aria-label="Reva Molo Motion Banner Video"
+        >
+          <source src="out/portofolio-revamolo-test1(header).mp4" type="video/mp4">
+          Browser Anda tidak mendukung pemutar video HTML5.
+        </video>
+      </div>
+
+      <!-- Subtle edge vignettes (minimalist, 0% video text obscuration) -->
+      <div class="hero-overlay-top"></div>
+      <div class="hero-overlay-bottom"></div>
+
+      <!-- Hero Bottom Utility Bar: Positioned cleanly beneath video frame -->
+      <div class="hero-bottom-bar">
+        <!-- Floating Status Badge -->
+        <div class="hero-floating-status">
+          <div class="pulse-dot"></div>
+          <span>Open for Projects • 2026</span>
+        </div>
+
+        <!-- Center Scroll Down Indicator -->
+        <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to content">
+          <div class="mouse-pill">
+            <div class="mouse-wheel"></div>
+          </div>
+          <span class="scroll-text">Scroll to Explore</span>
+        </a>
+
+        <!-- Sound Toggle Button -->
+        <button class="hero-audio-toggle" id="heroAudioToggle" aria-label="Toggle hero video audio">
+          <svg id="heroAudioIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <line x1="23" y1="9" x2="17" y2="15"/>
+            <line x1="17" y1="9" x2="23" y2="15"/>
+          </svg>
+          <span id="heroAudioText">Audio: Muted</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: NARRATIVE & BACKGROUND (About)
+         ========================================================================== -->
+    <section class="section" id="about" aria-label="Narrative & Academic Background">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="pill-badge">
+            <span class="pulse-dot"></span>
+            <span>01 // Narrative & Background</span>
+          </div>
+          <h2 class="section-title">
+            Fondasi Pemikiran & Latar Belakang
+          </h2>
+          <p class="section-subtitle">
+            Menggabungkan kepekaan analitis sosiologi dengan ketajaman strategi komunikasi visual modern.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Narrative Text & Sociological Vision -->
+          <div class="about-narrative reveal-on-scroll">
+            <h3 class="about-headline">
+              “Bridging <em>sociological perspective</em> into high-impact digital narratives.”
+            </h3>
+            
+            <p class="about-lead">
+              Lulusan Sosiologi (S.Sos) dengan predikat <strong>Cum Laude</strong> dari Universitas Brawijaya yang mengintegrasikan perspektif sosiologis dan analisis perilaku audiens ke dalam strategi komunikasi visual serta arsitektur konten digital berdaya jangkau tinggi.
+            </p>
+
+            <p class="about-body">
+              Pendekatan kerja saya berakar pada pemahaman mendalam terhadap lanskap sosial: bagaimana pesan dirasakan, bagaimana audiens membangun makna, dan bagaimana visual terstruktur mampu menggerakkan kesadaran maupun tindakan. Terbukti berpengalaman memimpin riset kampanye digital, penulisan narasi persuasif terarah, hingga eksekusi motion graphics terprogram untuk sektor teknologi kesehatan dan organisasi sosial.
+            </p>
+
+            <!-- Metrics Row -->
+            <div class="metrics-row">
+              <div class="metric-item">
+                <span class="metric-number">3.56</span>
+                <span class="metric-label">IPK Cum Laude</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">3+</span>
+                <span class="metric-label">Strategic Internships</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-number">100%</span>
+                <span class="metric-label">Digital Workflow</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Integrated 3D Education Card -->
+          <div class="education-card-container reveal-on-scroll">
+            <div class="education-card">
+              <div class="card-top-aura"></div>
+
+              <div class="edu-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                <span>Academic Degree & Honors</span>
+              </div>
+
+              <!-- Degree & University -->
+              <h4 class="edu-institution">
+                S.Sos <span>—</span> Universitas Brawijaya
+              </h4>
+
+              <!-- Expanding Emerald Divider -->
+              <div class="edu-divider"></div>
+
+              <!-- Showstopper Cum Laude Badge -->
+              <div class="cumlaude-badge">
+                <div class="star-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+                  </svg>
+                </div>
+                <span class="cumlaude-text">Cum Laude</span>
+                <span class="ipk-pill">IPK 3.56</span>
+              </div>
+
+              <span class="edu-footer-tag">
+                ✦ Graduated with Honors • Sociology
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: CORE COMPETENCIES & TOOLS (Keahlian)
+         ========================================================================== -->
+    <section class="section" id="competencies" aria-label="Core Competencies & Tools">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="pill-badge">
+            <span class="pulse-dot"></span>
+            <span>02 // Core Competencies & Tools</span>
+          </div>
+          <h2 class="section-title editorial-italic">
+            Strategic thinking meets technical execution.
+          </h2>
+          <p class="section-subtitle">
+            Pemetaan keahlian strategis yang mengawinkan riset komunikasi kualitatif dengan eksekusi alat digital modern.
+          </p>
+        </div>
+
+        <div class="competencies-container">
+          
+          <!-- 4 Strategic Pillars Grid -->
+          <div class="pillars-grid">
+            
+            <!-- Pillar 1: Strategic Planning -->
+            <div class="pillar-card reveal-on-scroll">
+              <div class="pillar-card-glow"></div>
+              <div class="pillar-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Strategic Planning</h3>
+              <p class="pillar-description">
+                Riset pasar komprehensif, perumusan ide kreatif berbasis data, segmentasi audiens, dan pemetaan arsitektur pesan berdaya jangkau tinggi.
+              </p>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Audience Mapping</span>
+                <span class="pillar-tag">Ideation</span>
+                <span class="pillar-tag">Message Strategy</span>
+              </div>
+            </div>
+
+            <!-- Pillar 2: Content Development -->
+            <div class="pillar-card reveal-on-scroll">
+              <div class="pillar-card-glow"></div>
+              <div class="pillar-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9"/>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Content Development</h3>
+              <p class="pillar-description">
+                Perancangan arsitektur cerita (storytelling), struktur narasi kampanye digital, copywriting persuasif, dan pengelolaan alur editorial multi-fase.
+              </p>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Story Architecture</span>
+                <span class="pillar-tag">Copywriting</span>
+                <span class="pillar-tag">Editorial Planning</span>
+              </div>
+            </div>
+
+            <!-- Pillar 3: Motion & Visual Direction -->
+            <div class="pillar-card reveal-on-scroll">
+              <div class="pillar-card-glow"></div>
+              <div class="pillar-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="23 7 16 12 23 17 23 7"/>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Motion & Visual Direction</h3>
+              <p class="pillar-description">
+                Animasi grafis dinamis, motion storytelling terprogram dengan Remotion, produksi video digital, dan konsistensi hirarki visual brand.
+              </p>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Programmatic Motion</span>
+                <span class="pillar-tag">Video Production</span>
+                <span class="pillar-tag">Visual Hierarchy</span>
+              </div>
+            </div>
+
+            <!-- Pillar 4: Digital Workflow Execution -->
+            <div class="pillar-card reveal-on-scroll">
+              <div class="pillar-card-glow"></div>
+              <div class="pillar-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <h3 class="pillar-title">Digital Workflow</h3>
+              <p class="pillar-description">
+                Administrasi dokumen strategis, perancangan landing page responsif, pengelolaan aset visual digital, dan integrasi workflow otomasi cerdas.
+              </p>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Landing Pages</span>
+                <span class="pillar-tag">Asset Management</span>
+                <span class="pillar-tag">Workflow Automation</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 4 Core Tools Interactive Cards -->
+          <div>
+            <div class="tools-sub-header reveal-on-scroll">
+              <h3 class="tools-sub-title">Core Execution Tools</h3>
+              <p class="section-subtitle">
+                Aset teknologi dan perangkat lunak pilihan yang mendukung eksekusi cepat berstandar industri.
+              </p>
+            </div>
+
+            <div class="tools-grid">
+              
+              <!-- Tool 1: Canva -->
+              <div class="tool-card reveal-on-scroll" tabindex="0" role="button" aria-label="Canva - Visual & Brand Design">
+                <div class="tool-card-glow"></div>
+                <div class="tool-icon-wrapper">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 8a4 4 0 0 0-4 4v1a4 4 0 0 0 8 0v-1a4 4 0 0 0-4-4z"/>
+                  </svg>
+                </div>
+                <h4 class="tool-name">Canva</h4>
+                <span class="tool-subtitle">Visual & Brand Design</span>
+                <p class="tool-desc">
+                  Pembuatan materi promosi cepat, panduan visual brand, dan desain infografis interaktif.
+                </p>
+              </div>
+
+              <!-- Tool 2: CapCut -->
+              <div class="tool-card reveal-on-scroll" tabindex="0" role="button" aria-label="CapCut - Dynamic Video Editing">
+                <div class="tool-card-glow"></div>
+                <div class="tool-icon-wrapper">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                </div>
+                <h4 class="tool-name">CapCut</h4>
+                <span class="tool-subtitle">Dynamic Video Editing</span>
+                <p class="tool-desc">
+                  Editing ritmik klip video pendek, subtitle kinetik dinamis, dan optimalisasi rasio mobile.
+                </p>
+              </div>
+
+              <!-- Tool 3: Antigravity -->
+              <div class="tool-card reveal-on-scroll" tabindex="0" role="button" aria-label="Antigravity - Agentic AI & Motion">
+                <div class="tool-card-glow"></div>
+                <div class="tool-icon-wrapper">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+                  </svg>
+                </div>
+                <h4 class="tool-name">Antigravity</h4>
+                <span class="tool-subtitle">Agentic AI & Motion</span>
+                <p class="tool-desc">
+                  Pemrograman motion grafis presisi, coding video Remotion, dan orkestrasi workflow AI cerdas.
+                </p>
+              </div>
+
+              <!-- Tool 4: Office 365 -->
+              <div class="tool-card reveal-on-scroll" tabindex="0" role="button" aria-label="Office 365 - Strategic Documentation">
+                <div class="tool-card-glow"></div>
+                <div class="tool-icon-wrapper">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"/>
+                    <rect x="14" y="3" width="7" height="7"/>
+                    <rect x="14" y="14" width="7" height="7"/>
+                    <rect x="3" y="14" width="7" height="7"/>
+                  </svg>
+                </div>
+                <h4 class="tool-name">Office 365</h4>
+                <span class="tool-subtitle">Strategic Documentation</span>
+                <p class="tool-desc">
+                  Penyusunan proposal pitch deck, analisis matriks konten, dan pelaporan strategis stakeholder.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: FEATURED WORKS & CASE STUDIES (Portofolio)
+         ========================================================================== -->
+    <section class="section" id="portfolio" aria-label="Featured Works & Case Studies">
+      <div class="container">
+        
+        <div class="section-header reveal-on-scroll">
+          <div class="pill-badge">
+            <span class="pulse-dot"></span>
+            <span>03 // Featured Works & Case Studies</span>
+          </div>
+          <h2 class="section-title editorial-italic">
+            Curated case studies delivering measurable resonance.
+          </h2>
+          <p class="section-subtitle">
+            Daftar inisiatif komunikasi, riset kampanye terarah, dan studi kasus proyek dengan dampak terukur.
+          </p>
+        </div>
+
+        <!-- 3 Project Cards Grid -->
+        <div class="portfolio-grid">
+          
+          <!-- Project 1: VaxNet -->
+          <article class="project-card reveal-on-scroll">
+            <div class="project-top-row">
+              <div class="project-step-badge">
+                <span class="step-num">01</span>
+                <span class="step-type">Company</span>
+              </div>
+              <span class="project-domain-tag">Healthcare Tech</span>
+            </div>
+
+            <h3 class="project-title">VaxNet</h3>
+
+            <div class="project-role-badge">
+              <span class="role-label">Posisi:</span>
+              <span class="role-value">Intern</span>
+            </div>
+
+            <p class="project-impact">
+              Perencanaan kampanye digital terpadu, pembuatan konten visual edukatif, dan perumusan strategi distribusi multi-platform untuk meningkatkan pemahaman teknologi kesehatan masyarakat.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Arsitektur pesan digital ramah pasien & keluarga</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Desain infografis informatif tentang alur vaksinasi</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Riset persepsi publik untuk memitigasi misinformasi</span>
+              </div>
+            </div>
+
+            <button class="btn-card-action" data-case-study="vaxnet" aria-label="View VaxNet Case Study">
+              <span>View Case Study Details</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </article>
+
+          <!-- Project 2: INAMED -->
+          <article class="project-card reveal-on-scroll">
+            <div class="project-top-row">
+              <div class="project-step-badge">
+                <span class="step-num">02</span>
+                <span class="step-type">Company</span>
+              </div>
+              <span class="project-domain-tag">Medical Comms</span>
+            </div>
+
+            <h3 class="project-title">INAMED</h3>
+
+            <div class="project-role-badge">
+              <span class="role-label">Posisi:</span>
+              <span class="role-value">Intern</span>
+            </div>
+
+            <p class="project-impact">
+              Perancangan konten terstruktur, arsitektur landing page informasi kesehatan, dan standardisasi komunikasi publik bagi audiens klinis, profesional medis, dan masyarakat luas.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Standardisasi tone of voice publikasi kesehatan</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Struktur navigasi portal informasi medis yang intuitif</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Penyelarasan materi dokumen untuk mitra klinis</span>
+              </div>
+            </div>
+
+            <button class="btn-card-action" data-case-study="inamed" aria-label="View INAMED Case Study">
+              <span>View Case Study Details</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </article>
+
+          <!-- Project 3: Halal Care -->
+          <article class="project-card reveal-on-scroll">
+            <div class="project-top-row">
+              <div class="project-step-badge">
+                <span class="step-num">03</span>
+                <span class="step-type">Company</span>
+              </div>
+              <span class="project-domain-tag">Social Storytelling</span>
+            </div>
+
+            <h3 class="project-title">HalalCare</h3>
+
+            <div class="project-role-badge">
+              <span class="role-label">Posisi:</span>
+              <span class="role-value">Intern</span>
+            </div>
+
+            <p class="project-impact">
+              Edukasi regulasi jaminan produk halal melalui format konten digital mikro yang mudah dicerna, mendorong literasi sertifikasi dan memperkuat kepercayaan konsumen komunitas.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Demistifikasi regulasi jaminan produk halal</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Serial carousel interaktif dengan tingkat retensi tinggi</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✦</span>
+                <span>Pendekatan sosiologis terhadap sentimen konsumen</span>
+              </div>
+            </div>
+
+            <button class="btn-card-action" data-case-study="halalcare" aria-label="View HalalCare Case Study">
+              <span>View Case Study Details</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </article>
+
+        </div>
+
+        <!-- ==========================================================================
+             MOTION SHOWCASE: Pemutar Klip Motion Graphics Interaktif Hasil Render Remotion
+             ========================================================================== -->
+        <div class="showcase-container reveal-on-scroll" id="showcase">
+          <div class="showcase-header">
+            <div class="showcase-info">
+              <div class="project-step-badge" style="margin-bottom: 8px;">
+                <span class="step-num">04</span>
+                <span class="step-type">Remotion Engine</span>
+              </div>
+              <h3>Motion Graphics Showcase</h3>
+              <p>Pemutar klip motion graphics interaktif hasil render Remotion multi-rasio.</p>
+            </div>
+
+            <!-- Segmented Ratio Switcher Tabs -->
+            <div class="ratio-switcher" role="tablist" aria-label="Select Video Aspect Ratio">
+              <button class="ratio-tab active" data-mode="header" role="tab" aria-selected="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="10" rx="2"/>
+                </svg>
+                <span>Header Banner (3.2:1)</span>
+              </button>
+              <button class="ratio-tab" data-mode="landscape" role="tab" aria-selected="false">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                </svg>
+                <span>Landscape (16:9)</span>
+              </button>
+              <button class="ratio-tab" data-mode="vertical" role="tab" aria-selected="false">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="2" width="14" height="20" rx="2"/>
+                </svg>
+                <span>Vertical Reel (9:16)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Video Stage Area (Completely unclipped 100% visible stage) -->
+          <div class="showcase-video-stage aspect-header" id="showcaseStage">
+            <video 
+              id="showcaseVideo" 
+              class="showcase-video" 
+              src="out/portofolio-revamolo-test1(header).mp4" 
+              poster="out/header-scene1.png"
+              loop 
+              muted 
+              playsinline
+              preload="metadata"
+            >
+              <source src="out/portofolio-revamolo-test1(header).mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Video Controls Bar (Sleek bar placed below stage so zero video visuals are cropped/covered) -->
+          <div class="video-custom-controls">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <button class="btn-video-ctrl" id="btnShowcasePlay" aria-label="Play/Pause Showcase Video">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </button>
+              <button class="btn-video-ctrl" id="btnShowcaseMute" aria-label="Mute/Unmute Showcase Video">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                  <line x1="23" y1="9" x2="17" y2="15"/>
+                  <line x1="17" y1="9" x2="23" y2="15"/>
+                </svg>
+              </button>
+            </div>
+
+            <span class="video-status-text" id="showcaseStatusText">3.2:1 Ultra-Wide Banner</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: OUTRO & CONTACT (Footer)
+         ========================================================================== -->
+    <section class="section outro-section" id="contact" aria-label="Outro & Contact">
+      <div class="container">
+        
+        <div class="outro-content reveal-on-scroll">
+          
+          <!-- Top Status Pill matching Scene 5 -->
+          <div class="pill-badge" style="margin-bottom: 24px;">
+            <span class="pulse-dot"></span>
+            <span>Open for Opportunities</span>
+          </div>
+
+          <!-- Headline Utama (Editorial Serif) -->
+          <h2 class="outro-headline">
+            “Let’s collaborate & connect.”
+          </h2>
+
+          <p class="outro-subtitle">
+            Looking forward to discussing creative strategy, brand storytelling, and impactful content development.
+          </p>
+
+          <!-- Showstopper Email Pill Button -->
+          <div class="email-hero-container">
+            <!-- Double Radar Ripple Waves matching Scene 5 -->
+            <div class="radar-ripple-1"></div>
+            <div class="radar-ripple-2"></div>
+
+            <div class="copy-toast" id="copyToast">Email Copied to Clipboard!</div>
+
+            <a href="mailto:revahayi@gmail.com" class="email-pill-button" aria-label="Send email to revahayi@gmail.com">
+              <div class="email-icon-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="3"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </div>
+              <span class="email-text">revahayi@gmail.com</span>
+              <button type="button" class="btn-copy-email" id="btnCopyEmail" title="Copy email address" aria-label="Copy email address">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+              </button>
+            </a>
+          </div>
+
+          <!-- Supporting Links -->
+          <div class="supporting-links">
+            <a href="https://linkedin.com/in/revamolo" target="_blank" rel="noopener noreferrer" class="btn-secondary-link" aria-label="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+              <span>Connect on LinkedIn</span>
+            </a>
+
+            <a href="#hero" class="btn-secondary-link" id="btnDownloadCV" aria-label="Download CV / Resume">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>Download CV / Resume</span>
+            </a>
+
+            <a href="https://wa.me/?text=Halo%20Reva,%20saya%20tertarik%20untuk%20berdiskusi%20proyek%20bersama%20Anda." target="_blank" rel="noopener noreferrer" class="btn-secondary-link" aria-label="WhatsApp Direct Chat">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+              <span>WhatsApp Direct</span>
+            </a>
+          </div>
+
+          <!-- Metadata Information matching Scene 5 -->
+          <div class="outro-meta-info">
+            <span class="meta-location">
+              ✦ Based in Indonesia • Ready for Worldwide Projects
+            </span>
+            <span class="meta-status">
+              Available for Contract & Full-Time Roles
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Site Footer Bottom Bar -->
+        <footer class="site-footer-bar">
+          <p class="footer-copy">
+            © 2026 Reva Molo. All rights reserved.
+          </p>
+          <span class="footer-craft-tag">
+            Crafted with sociological depth & dynamic visual motion
+          </span>
+        </footer>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Case Study Modal Dialog -->
+  <div class="modal-backdrop" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="btn-modal-close" id="btnModalClose" aria-label="Close Case Study Details">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <span class="modal-badge" id="modalBadge">Case Study</span>
+      <h3 class="modal-title" id="modalTitle">Project Title</h3>
+      <p class="modal-role" id="modalRole">Strategic Planning & Content Development Intern</p>
+
+      <img src="out/header-scene3.png" alt="Project Preview" class="modal-image-preview" id="modalImage">
+
+      <div class="modal-section">
+        <h4 class="modal-section-title">Ringkasan Masalah & Tujuan</h4>
+        <p class="modal-section-text" id="modalSummary">Summary text...</p>
+      </div>
+
+      <div class="modal-section">
+        <h4 class="modal-section-title">Pendekatan Sosiologis & Komunikasi</h4>
+        <p class="modal-section-text" id="modalApproach">Approach text...</p>
+      </div>
+
+      <div class="modal-section">
+        <h4 class="modal-section-title">Deliverables & Dampak Eksekusi</h4>
+        <ul class="modal-list" id="modalDeliverables">
+          <!-- Populated dynamically -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Floating Button -->
+  <button class="btn-back-to-top" id="btnBackToTop" aria-label="Back to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"/>
+      <polyline points="5 12 12 5 19 12"/>
+    </svg>
+  </button>
+
+  <!-- Script Engine -->
+  <script src="main.js"></script>
+</body>
+</html>

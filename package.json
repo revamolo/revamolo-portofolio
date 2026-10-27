@@ -1,0 +1,18 @@
+{
+  "name": "web-portofolio-revamolo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reva Molo — Creative Strategist & Content Development Portfolio",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "creative-strategist",
+    "motion-graphics",
+    "remotion",
+    "sociology"
+  ],
+  "author": "Reva Molo",
+  "license": "MIT"
+}
