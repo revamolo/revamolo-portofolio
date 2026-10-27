@@ -582,6 +582,7 @@ body {
 
 @media (min-width: 768px) {
   .hero-floating-status {
+    top: auto;
     bottom: 36px;
     left: 40px;
     transform: none;
@@ -694,14 +695,18 @@ body {
   .hero-audio-toggle {
     bottom: 36px;
     right: 40px;
+    left: auto;
+    transform: none;
+  }
+
+  .hero-audio-toggle:hover {
+    transform: translateY(-2px);
   }
 }
 
 .hero-audio-toggle:hover {
   background: rgba(6, 78, 59, 0.9);
   border-color: var(--mint-accent);
-  color: #FFFFFF;
-}
   color: #FFFFFF;
 }
 
@@ -2078,7 +2083,8 @@ body {
   }
 
   .hero-overlay-top {
-    height: 90px;
+    height: 130px;
+    background: linear-gradient(to bottom, rgba(3, 17, 12, 0.95) 0%, rgba(3, 17, 12, 0.7) 60%, rgba(3, 17, 12, 0) 100%);
   }
 
   .hero-overlay-bottom {
@@ -2086,9 +2092,10 @@ body {
     background: linear-gradient(to top, rgba(3, 17, 12, 0.98) 0%, rgba(3, 17, 12, 0.75) 50%, rgba(3, 17, 12, 0) 100%);
   }
 
-  /* Mobile Tier 1: Floating Status Badge centered directly above mouse indicator */
+  /* Mobile Top: Floating Status Badge placed at the top below navbar */
   .hero-floating-status {
-    bottom: 58px;
+    top: 78px;
+    bottom: auto;
     left: 50%;
     transform: translateX(-50%);
     padding: 6px 14px;
@@ -2106,7 +2113,24 @@ body {
     letter-spacing: 0.1em;
   }
 
-  /* Mobile Tier 2: Centered Mouse Scroll Animation */
+  /* Mobile Bottom Tier 1: Audio Toggle centered directly above mouse indicator */
+  .hero-audio-toggle {
+    bottom: 58px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    padding: 6px 16px;
+    min-height: 34px;
+    font-size: 0.68rem;
+    white-space: nowrap;
+    z-index: 10;
+  }
+
+  .hero-audio-toggle:hover {
+    transform: translateX(-50%) translateY(-2px);
+  }
+
+  /* Mobile Bottom Tier 2: Centered Mouse Scroll Animation */
   .hero-scroll-indicator {
     bottom: 16px;
     left: 50%;
@@ -2119,16 +2143,6 @@ body {
     width: 18px;
     height: 28px;
     padding-top: 4px;
-  }
-
-  /* Mobile Audio Toggle: Neatly placed in bottom right corner with ample clearance */
-  .hero-audio-toggle {
-    bottom: 16px;
-    right: 16px;
-    padding: 6px 12px;
-    min-height: 32px;
-    font-size: 0.68rem;
-    z-index: 10;
   }
 
   /* Section 2: Narrative & Background */
