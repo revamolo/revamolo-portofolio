@@ -4,6 +4,7 @@
   "private": true,
   "description": "Reva Molo — Creative Strategist & Content Development Portfolio",
   "scripts": {
+    "build": "echo 'Static build ready'",
     "start": "node server.js"
   },
   "keywords": [
