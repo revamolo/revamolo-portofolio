@@ -584,6 +584,7 @@ body {
   .hero-floating-status {
     bottom: 36px;
     left: 40px;
+    transform: none;
   }
 }
 
@@ -2081,14 +2082,23 @@ body {
   }
 
   .hero-overlay-bottom {
-    height: 22%;
+    height: 28%;
+    background: linear-gradient(to top, rgba(3, 17, 12, 0.98) 0%, rgba(3, 17, 12, 0.75) 50%, rgba(3, 17, 12, 0) 100%);
   }
 
+  /* Mobile Tier 1: Floating Status Badge centered directly above mouse indicator */
   .hero-floating-status {
-    bottom: 24px;
-    left: 16px;
+    bottom: 58px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 6px 14px;
     gap: 8px;
+    white-space: nowrap;
+    z-index: 10;
+  }
+
+  .hero-floating-status:hover {
+    transform: translateX(-50%) translateY(-2px);
   }
 
   .hero-floating-status span {
@@ -2096,9 +2106,13 @@ body {
     letter-spacing: 0.1em;
   }
 
+  /* Mobile Tier 2: Centered Mouse Scroll Animation */
   .hero-scroll-indicator {
-    bottom: 20px;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
     gap: 4px;
+    z-index: 10;
   }
 
   .mouse-pill {
@@ -2107,12 +2121,14 @@ body {
     padding-top: 4px;
   }
 
+  /* Mobile Audio Toggle: Neatly placed in bottom right corner with ample clearance */
   .hero-audio-toggle {
-    bottom: 24px;
+    bottom: 16px;
     right: 16px;
-    padding: 6px 14px;
-    min-height: 34px;
+    padding: 6px 12px;
+    min-height: 32px;
     font-size: 0.68rem;
+    z-index: 10;
   }
 
   /* Section 2: Narrative & Background */
