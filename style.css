@@ -501,74 +501,52 @@ body {
 }
 
 /* ==========================================================================
-   SECTION 1: HERO BANNER (Full Responsive Video Showcase)
+   SECTION 1: HERO BANNER (Full-Bleed Fullscreen Video Fit)
    ========================================================================== */
 .hero-section {
   position: relative;
   width: 100%;
+  height: 100dvh;
   min-height: 100dvh;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--bg-dark);
-  padding: 85px 20px 24px;
+  padding: 0;
+  margin: 0;
 }
 
-@media (min-width: 768px) {
-  .hero-section {
-    padding: 95px 36px 30px;
-  }
-}
-
-/* Ambient blurred video backdrop (fills the viewport with living atmospheric color) */
-.hero-video-ambient {
-  position: absolute;
-  inset: -30px;
-  width: calc(100% + 60px);
-  height: calc(100% + 60px);
-  object-fit: cover;
-  filter: blur(48px) brightness(0.22);
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 1;
-  transform: scale(1.08);
-}
-
-/* Main crisp video frame wrapper */
 .hero-video-wrapper {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 1680px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .hero-video {
   width: 100%;
-  aspect-ratio: 16 / 5; /* 1920 / 600 ultra-wide format */
-  max-height: calc(100dvh - 165px);
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--border-emerald);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), var(--glow-emerald);
-  background: #020C07;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: #04140D;
 }
 
-/* Overlays: Minimal edge vignettes that do NOT cover any video text or badges */
+/* Overlays: Top navbar legibility & bottom 16% smooth blend */
 .hero-overlay-top {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
-  background: linear-gradient(to bottom, rgba(4, 20, 13, 0.8) 0%, rgba(4, 20, 13, 0) 100%);
-  z-index: 3;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(4, 20, 13, 0.75) 0%, rgba(4, 20, 13, 0) 100%);
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -577,27 +555,18 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
-  background: linear-gradient(to bottom, rgba(4, 20, 13, 0) 0%, rgba(4, 20, 13, 0.9) 100%);
-  z-index: 3;
+  height: 16%;
+  background: linear-gradient(to bottom, rgba(6, 26, 18, 0) 0%, rgba(5, 24, 16, 0.5) 40%, rgba(4, 20, 13, 1) 100%);
+  z-index: 2;
   pointer-events: none;
 }
 
-/* Hero Bottom Utility Bar: Neatly organized beneath the video frame */
-.hero-bottom-bar {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 1680px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 6px 0;
-  gap: 16px;
-}
-
-/* Floating Status Badge */
+/* Floating Status Badge (Bottom Left) */
 .hero-floating-status {
+  position: absolute;
+  bottom: 30px;
+  left: 24px;
+  z-index: 10;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -607,8 +576,15 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1.2px solid var(--border-emerald);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), var(--glow-emerald);
   transition: var(--transition-smooth);
+}
+
+@media (min-width: 768px) {
+  .hero-floating-status {
+    bottom: 36px;
+    left: 40px;
+  }
 }
 
 .hero-floating-status:hover {
@@ -628,14 +604,19 @@ body {
 
 /* Center Scroll Down Indicator */
 .hero-scroll-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   text-decoration: none;
   color: var(--text-muted);
   cursor: pointer;
   transition: var(--transition-fast);
-  padding: 6px 14px;
 }
 
 .hero-scroll-indicator:hover {
@@ -683,8 +664,12 @@ body {
   }
 }
 
-/* Sound / Video Controls Toggle Button */
+/* Sound / Video Controls Toggle Button (Bottom Right) */
 .hero-audio-toggle {
+  position: absolute;
+  bottom: 30px;
+  right: 24px;
+  z-index: 10;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -702,6 +687,13 @@ body {
   letter-spacing: 0.08em;
   cursor: pointer;
   transition: var(--transition-fast);
+}
+
+@media (min-width: 768px) {
+  .hero-audio-toggle {
+    bottom: 36px;
+    right: 40px;
+  }
 }
 
 .hero-audio-toggle:hover {

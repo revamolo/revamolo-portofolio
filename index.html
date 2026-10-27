@@ -76,72 +76,54 @@
   <div class="main-wrapper">
 
     <!-- ==========================================================================
-         SECTION 1: HERO BANNER (Full-Bleed Video Fit)
-         ========================================================================== -->
-    <!-- ==========================================================================
-         SECTION 1: HERO BANNER (Full Responsive Video Showcase)
+         SECTION 1: HERO BANNER (Full-Bleed Viewport Video Fit)
          ========================================================================== -->
     <section class="hero-section" id="hero" aria-label="Hero Video Banner">
-      <!-- Ambient blurred backdrop for seamless edge glow and viewport filling -->
-      <video 
-        class="hero-video-ambient" 
-        src="out/portofolio-revamolo-test1(header).mp4" 
-        autoplay 
-        muted 
-        loop 
-        playsinline 
-        aria-hidden="true"
-        tabindex="-1"
-      ></video>
-
       <div class="hero-video-wrapper">
         <video 
           class="hero-video" 
           id="heroVideo"
-          src="out/portofolio-revamolo-test1(header).mp4" 
-          poster="out/header-scene1.png"
+          src="out/portofolio-revamolo-test1(landscape).mp4" 
+          poster="out/land-scene1.png"
           autoplay 
           muted 
           loop 
           playsinline 
           preload="auto"
-          aria-label="Reva Molo Motion Banner Video"
+          aria-label="Reva Molo Motion Video"
         >
-          <source src="out/portofolio-revamolo-test1(header).mp4" type="video/mp4">
+          <source src="out/portofolio-revamolo-test1(landscape).mp4" type="video/mp4">
           Browser Anda tidak mendukung pemutar video HTML5.
         </video>
       </div>
 
-      <!-- Subtle edge vignettes (minimalist, 0% video text obscuration) -->
+      <!-- Overlays: Top gradient for navigation & bottom 16% blend into About section -->
       <div class="hero-overlay-top"></div>
       <div class="hero-overlay-bottom"></div>
 
-      <!-- Hero Bottom Utility Bar: Positioned cleanly beneath video frame -->
-      <div class="hero-bottom-bar">
-        <!-- Floating Status Badge -->
-        <div class="hero-floating-status">
-          <div class="pulse-dot"></div>
-          <span>Open for Projects • 2026</span>
-        </div>
-
-        <!-- Center Scroll Down Indicator -->
-        <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to content">
-          <div class="mouse-pill">
-            <div class="mouse-wheel"></div>
-          </div>
-          <span class="scroll-text">Scroll to Explore</span>
-        </a>
-
-        <!-- Sound Toggle Button -->
-        <button class="hero-audio-toggle" id="heroAudioToggle" aria-label="Toggle hero video audio">
-          <svg id="heroAudioIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-            <line x1="23" y1="9" x2="17" y2="15"/>
-            <line x1="17" y1="9" x2="23" y2="15"/>
-          </svg>
-          <span id="heroAudioText">Audio: Muted</span>
-        </button>
+      <!-- Floating Status Badge (Bottom Left) -->
+      <div class="hero-floating-status">
+        <div class="pulse-dot"></div>
+        <span>Open for Projects • 2026</span>
       </div>
+
+      <!-- Center Scroll Down Indicator -->
+      <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to content">
+        <div class="mouse-pill">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll to Explore</span>
+      </a>
+
+      <!-- Floating Sound Toggle (Bottom Right) -->
+      <button class="hero-audio-toggle" id="heroAudioToggle" aria-label="Toggle hero video audio">
+        <svg id="heroAudioIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <line x1="23" y1="9" x2="17" y2="15"/>
+          <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+        <span id="heroAudioText">Audio: Muted</span>
+      </button>
     </section>
 
     <!-- ==========================================================================
